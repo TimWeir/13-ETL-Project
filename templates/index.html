@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ETL Project - NHL Salary Cap</title>
+  <img src="www-league.nhlstatic.com/images/logos/league-dark/133-flat.svg">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  hello {{ data }}
+  <div class="container-fluid">
+
+    <div class="jumbotron text-center">
+      <h1>NHL Salary Cap Summary</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape NHL Data</a></p>
+    </div>
+  </div>
+    
+  <div>{{ data.cap_plyr_list }}</div>
+  <div>Tim</div>
+
+  <div class="container-fluid">
+    <!-- {% for item in data.team_cap %} -->
+    <div>Tim</div>
+    <div class='row'>
+      <div class="col-md-12">
+        <!-- <img src="{{  data.img_list  }}" class="img-responsive center-block d-block mx-auto"/> -->
+          <div>
+            <div>Tim</div>
+            
+            <!-- <a>{{data.cap_slrycp_list}}</a>
+            <a>{{data.cap_plyr_list}}</a>
+            <a>{{data.cap_slry_list}}</a> -->
+
+          </div>
+      </div>
+    </div>
+    <!-- {% endfor %} -->
+  </div>
+  
+
+
+    <!-- <div class='row'>
+      <div class="col-md-12">
+        <h2 class="text-center">More NHL Team details</h2>
+      </div>
+      <div class="col-md-12">
+        <table>{{ data.teams|safe }}</table>
+      </div>
+    </div> -->
+
+  </div>
+
+
+</body>
+
+</html>
