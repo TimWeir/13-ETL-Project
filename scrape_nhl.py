@@ -80,8 +80,8 @@ def scrape():
     #sort as desired (oldest to newest)
     teams_df = teams_df.sort_values(by=['First Year','Franchise ID'])
 
-    #teams_dict = teams_df.to_html(index=False)
-    #nhl_scrape['teams'] = teams_dict
+    teams_dict = teams_df.to_html(index=False)
+    nhl_scrape['teams'] = teams_dict
 
 
 
@@ -140,6 +140,7 @@ def scrape():
 
     #initialize variable
     img_list = []
+    int_list = []
 
     #Loop through NHL team websites to scrape logo images
     for i in range(len(top_cap_df3)):
@@ -162,8 +163,10 @@ def scrape():
         img_link = img_link.replace('http:','')
         img_link = img_link.replace('//','')
         img_list.append(img_link)
+        int_list.append(int(i))
         browser.quit()
 
+        nhl_scrape['int_list'] = int_list
         nhl_scrape['img_list'] = img_list
 
     print(img_list)

@@ -15,9 +15,10 @@ mongo = PyMongo(app)
 @app.route("/")
 def index():
     data = mongo.db.nhlproject.find_one()
+    i=0
     print(data)
     print("==")
-    return render_template("index.html", data=data)
+    return render_template("index.html", data=data, i=i)
 
 
 @app.route("/scrape")
